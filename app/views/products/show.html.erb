@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @product.image.url(:thumb) %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>country_code:</strong>
+  <%= @product.country_code %>
+</p>
+
+
+ <div class="row">
+  <div class="col-xs-6">
+    <h3>Total Visits by Country</h3>
+    <%= pie_chart @visits.group(:country).count %>
+  </div>
+</div>
+
+
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
