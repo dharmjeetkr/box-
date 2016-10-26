@@ -2,6 +2,23 @@
 
 <h1>Listing Products</h1>
 
+<%= search_form_for @search do |f| %>      
+
+  <div class="field">
+    <%= f.label :name_cont, "Name contains" %>
+    <%= f.text_field :name_cont %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Search" %>
+  </div>
+<% end %>
+
+<tr>   
+  <th><%= sort_link(@search, :name, "Product Name") %></th>
+  <th><%= sort_link(@search, :description, "Description") %> </th>
+</tr>
+
+
 
 <table>
   <thead>

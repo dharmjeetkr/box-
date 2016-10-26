@@ -20,8 +20,14 @@
 
  <div class="row">
   <div class="col-xs-6">
-    <h3>Total Visits by Country</h3>
+    <h2>Total Visits by Country</h2>
     <%= pie_chart @visits.group(:country).count %>
+ 
+      <h2> Geo google chart </h3>
+      <center> <%= geo_chart @visits.group(:country).count %> </center>
+
+
+
   </div>
 </div>
 
@@ -30,3 +36,5 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+
+

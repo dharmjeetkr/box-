@@ -22,3 +22,4 @@ Visit.create  country: 'South Korea', visited_at: DateTime.now, load_time: 2.0
 
 Visit.create  country: 'South Korea', visited_at: DateTime.now - 1.day, load_time: 2.5
 Visit.create  country: 'South Korea', visited_at: DateTime.now - 1.day, load_time: 4.0
+
